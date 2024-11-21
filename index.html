@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Actividad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Registros</h1>
+        <div id="dataTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Oficio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="dataBody">
+                </tbody>
+            </table>
+            <button class="btn primary" id="btnShowCreateForm">Nuevo Registro</button>
+        </div>
+        <div id="formContainer" class="hidden">
+            <form id="crudForm">
+                <h2 id="formTitle">Nuevo Registro</h2>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" placeholder="ID único" required>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <label for="name">Oficio:</label>
+                <input type="text" id="oficio" name="oficio" placeholder="Oficio" required>
+                <div class="form-buttons">
+                    <button type="submit" class="btn success" id="btnSave">Guardar</button>
+                    <button type="button" class="btn danger" id="btnCancel">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
